@@ -1,0 +1,46 @@
+{
+  "name": "proelium",
+  "version": "1.0.0",
+  "description": "HTTP load testing platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amrfaissal/proelium.git"
+  },
+  "keywords": [
+    "vegeta",
+    "golang",
+    "http",
+    "load-testing"
+  ],
+  "author": "Faissal Elamraoui",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/amrfaissal/proelium/issues"
+  },
+  "homepage": "https://github.com/amrfaissal/proelium#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-tap-event-plugin": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "pretty-hrtime": "^1.0.3",
+    "require-dir": "^0.3.1",
+    "underscore": "^1.8.3",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
+  }
+}
