@@ -29,10 +29,11 @@ footer {
     padding: 1px 5px 1px 4px;
     background: rgba(0, 0, 0, 0.87);
 }
-.user {
+.attack {
     padding: 2%;
     line-height: 54px;
     text-align: center;
+    cursor: pointer;
 }
 .side-nav {
     width: 240px;

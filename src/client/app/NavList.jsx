@@ -14,28 +14,34 @@
    limitations under the License.
 */
 import React, {Component} from 'react';
+import {Modal} from 'react-materialize';
 
-const NavList = () => {
-  let localStyle = {
-    fontSize: "inherit"
-  };
-  return (
-    <ul id="nav-mobile" className="side-nav custom-side-nav fixed blue darken-4">
-        <li>
-          <div className="user">
-            <div className="chip grey darken-3 white-text" style={localStyle}>
-              <i className="material-icons">add</i>
-              <span>New attack</span>
-            </div>
-          </div>
-        </li>
-        <li>
-          <a className="blue white-text darken-3 waves-effect waves-grey">
-            <span>Dashboard</span>
-          </a>
-        </li>
-      </ul>
-  );
+import AttackForm from './AttackForm';
+
+
+class NavList extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <ul id="nav-mobile" className="side-nav custom-side-nav fixed blue darken-4">
+          <li>
+            <AttackForm />
+          </li>
+          <li>
+            <a className="blue white-text darken-3 waves-effect waves-grey">
+              <span>Dashboard</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    );
+  }
+
 };
 
 export default NavList;
