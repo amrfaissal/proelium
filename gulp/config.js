@@ -1,5 +1,5 @@
-var dest = './build',
-  src = './src',
+var dest = './assets',
+  src = './src/client',
   mui = './node_modules/material-ui/src';
 
 module.exports = {
@@ -23,10 +23,10 @@ module.exports = {
     // A separate bundle will be generated for each
     // bundle config in the list below
     bundleConfigs: [{
-      entries: src + '/app/app.js',
+      entries: src + '/app/App.jsx',
       dest: dest,
       outputName: 'app.js'
     }],
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   }
 };
