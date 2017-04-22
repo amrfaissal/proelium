@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/amrfaissal/proelium#readme",
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-materialize": "^0.18.1",
