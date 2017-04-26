@@ -15,6 +15,8 @@
 */
 import React, {Component} from 'react';
 
+import MetricCard from './MetricCard';
+
 const ReportChart = () => {
   return (
     <div className="card card-header">
@@ -22,35 +24,21 @@ const ReportChart = () => {
         <span className="card-title black-text">
           Report
         </span>
-        <div className="ct-chart"></div>
-      </div>
-    </div>
-  );
-};
-
-const Card = (props) => {
-  return (
-    <div className="col s12 m6 l3">
-      <div className="card">
-        <div className="card-content black-text">
-          <p><i className="mdi-social-group-add"></i>{props.title}</p>
-          <h4 className="card-stats-number">{props.value}</h4>
-          <p className="card-stats-compare"><i className="mdi-hardware-keyboard-arrow-up"></i> {props.percentage} <span className="deep-orange-text text-lighten-2">from yesterday</span>
-          </p>
+        <div className="ct-chart">
+          <p>This is just a placeholder for a graph</p>
         </div>
       </div>
     </div>
   );
 };
 
-const CardRow = () => {
+const MetricsPanel = () => {
   return (
     <div className="row">
-      <Card title="New Users" value="56,000" percentage="15%"/>
-      <Card title="New Users" value="56,000" percentage="15%"/>
-      <Card title="New Users" value="56,000" percentage="15%"/>
-      <Card title="New Users" value="56,000" percentage="15%"/>
-    </div> 
+      <MetricCard title="New Users" value="56,000" percentage="15%"/>
+      <MetricCard title="New Users" value="56,000" percentage="15%"/>
+      <MetricCard title="New Users" value="56,000" percentage="15%"/>
+    </div>
   );
 };
 
@@ -85,18 +73,26 @@ const ClearOutput = () => {
   );
 };
 
-const Dashboard = () => {
-  return (
-    <main>
-      <div className="breadcrumb grey lighten-3">
-        <h6>Dashboard</h6>
-      </div>
-      <ReportChart />
-      <CardRow />
-      <LogOutput/>
-      <ClearOutput />
-    </main>
-  );
-};
+
+class Dashboard extends Component {
+  constructor(props) {
+    super(props);
+    // maybe start a websocket connection here
+  }
+
+  render() {
+    return (
+      <main>
+        <div className="breadcrumb grey lighten-3">
+          <h6>Dashboard</h6>
+        </div>
+        <ReportChart />
+        <MetricsPanel />
+        <LogOutput/>
+        <ClearOutput />
+      </main>
+    );
+  }
+}
 
 export default Dashboard;
